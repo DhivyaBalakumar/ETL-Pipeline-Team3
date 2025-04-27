@@ -2,13 +2,13 @@ import threading
 import subprocess
 
 def run_views():
-    subprocess.run(["python", "extract_views.py"])
+    subprocess.run(["python", "extractViews.py"])
 
 def run_likes():
-    subprocess.run(["python", "extract_likes.py"])
+    subprocess.run(["python", "extractLikes.py"])
 
 def run_comments():
-    subprocess.run(["python", "extract_comments.py"])
+    subprocess.run(["python", "extractComments.py"])
 
 # Create threads
 t1 = threading.Thread(target=run_views)
