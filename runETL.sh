@@ -1,7 +1,16 @@
 #!/bin/bash
+echo "🚀 Starting ETL Pipeline..."
 
-echo "🚀 Installing requirements..."
-pip install -r requirements.txt
+# Step 1: Extract
+python run_all_extractors.py
 
-echo "🔄 Running ETL pipeline..."
+# Step 2: Transform
+python transform.py
+
+# Step 3: Load
+python load.py
+
+# Step 4: Main Orchestration
 python main.py
+
+echo "🎯 ETL Pipeline Completed Successfully!"
